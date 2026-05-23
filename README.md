@@ -20,7 +20,7 @@ Built for scalable full-stack applications with shared packages, reusable UI com
 
 ---
 
-# Tech Stack
+## Tech Stack
 
 | Tool        | Purpose                   |
 | ----------- | ------------------------- |
@@ -35,7 +35,7 @@ Built for scalable full-stack applications with shared packages, reusable UI com
 
 ---
 
-# Project Structure
+## Project Structure
 
 ```txt
 .
@@ -57,18 +57,20 @@ Built for scalable full-stack applications with shared packages, reusable UI com
 
 ---
 
-# Getting Started
+## Getting Started
 
-## Clone Repository
+### Use as Template
+
+Click **"Use this template"** on GitHub to create a new repo from this template.
+
+### Clone Repository
 
 ```bash
-git clone <your-repo-url>
-cd <repo-name>
+git clone https://github.com/anshul333y/turborepo-tailwind-prisma-template.git
+cd turborepo-tailwind-prisma-template
 ```
 
----
-
-## Install Dependencies
+### Install Dependencies
 
 ```bash
 bun install
@@ -76,15 +78,9 @@ bun install
 
 ---
 
-# Environment Variables
+## Environment Variables
 
-Create:
-
-```bash
-packages/db/.env
-```
-
-Example:
+Create `packages/db/.env`:
 
 ```env
 DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/db_name"
@@ -92,63 +88,30 @@ DATABASE_URL="postgresql://USER:PASSWORD@localhost:5432/db_name"
 
 ---
 
-# Prisma Setup
-
-## Run Migrations
+## Prisma Setup
 
 ```bash
-bun run db:migrate
-```
-
-## Generate Prisma Client
-
-```bash
-bun run db:generate
-```
-
-## Deploy Migrations
-
-```bash
-bun run db:deploy
-```
-
-## Reset Database
-
-```bash
-bunx --bun prisma migrate reset
+bun run db:migrate       # Run migrations
+bun run db:generate      # Generate Prisma client
+bun run db:deploy        # Deploy migrations
+bunx --bun prisma migrate reset  # Reset database
 ```
 
 ---
 
-# Development
-
-## Start All Apps
+## Development
 
 ```bash
-bun run dev
-```
-
-## Build Everything
-
-```bash
-bun run build
-```
-
-## Lint Workspace
-
-```bash
-bun run lint
+bun run dev    # Start all apps
+bun run build  # Build everything
+bun run lint   # Lint workspace
 ```
 
 ---
 
-# TailwindCSS Setup
+## TailwindCSS Setup
 
-Shared Tailwind configuration lives inside:
-
-```bash
-packages/tailwind-config
-```
+Shared Tailwind configuration lives inside `packages/tailwind-config`.
 
 Example usage:
 
@@ -159,67 +122,45 @@ Example usage:
 
 ---
 
-# ESLint Setup
+## ESLint Setup
 
-Shared ESLint configuration lives inside:
-
-```bash
-packages/eslint-config
-```
-
-This allows consistent linting rules across all apps and packages.
+Shared ESLint configuration lives inside `packages/eslint-config`, allowing consistent linting rules across all apps and packages.
 
 ---
 
-# Apps
+## Apps
 
-## `apps/web`
+### `apps/web`
 
 Main frontend application.
 
----
-
-## `apps/docs`
+### `apps/docs`
 
 Documentation application for project docs, guides, and references.
 
 ---
 
-# Shared Packages
+## Shared Packages
 
-## `@repo/ui`
+### `@repo/ui`
 
 Reusable UI components shared across applications.
 
----
-
-## `@repo/db`
+### `@repo/db`
 
 Shared Prisma client, schema, and database utilities.
 
----
-
-## `@repo/tailwind-config`
+### `@repo/tailwind-config`
 
 Centralized TailwindCSS configuration for consistent styling.
 
----
-
-## `@repo/eslint-config`
+### `@repo/eslint-config`
 
 Reusable ESLint configuration shared across the monorepo.
 
 ---
 
-# Turborepo Commands
-
-## Run Specific Task
-
-```bash
-bunx --bun turbo run <task>
-```
-
-Examples:
+## Turborepo Commands
 
 ```bash
 bunx --bun turbo run dev
@@ -229,7 +170,7 @@ bunx --bun turbo run lint
 
 ---
 
-# Why This Template?
+## Why This Template?
 
 This template is designed for:
 
@@ -243,7 +184,7 @@ This template is designed for:
 
 ---
 
-# Recommended Additions
+## Recommended Additions
 
 - Authentication
 - API server
@@ -258,9 +199,7 @@ This template is designed for:
 
 ---
 
-# Create New Apps
-
-Example:
+## Create New Apps
 
 ```bash
 mkdir apps/admin
@@ -270,7 +209,7 @@ Add your new app and Turborepo will automatically include it in the workspace.
 
 ---
 
-# Notes
+## Notes
 
 - Uses Bun as the default package manager.
 - Prisma client is shared through `@repo/db`.
@@ -280,6 +219,6 @@ Add your new app and Turborepo will automatically include it in the workspace.
 
 ---
 
-# License
+## License
 
-MIT License
+This project is licensed under the [MIT License](./LICENSE).
